@@ -1,1 +1,1 @@
-Sitemap: https://mdehollander.github.io/glodb-website/sitemap.xml
+Sitemap: https://www.glodb.org/sitemap.xml
