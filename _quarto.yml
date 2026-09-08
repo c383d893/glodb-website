@@ -10,20 +10,23 @@ website:
       - download.qmd
       - about.qmd
       - contact.qmd
-    tools:
 
+    tools:
+      - icon: bluesky
+        href: https://camilledelavaux.bsky.social
       - icon: github
         menu:
           - text: Source Code
             href:  https://github.com/c383d893/AMF-LSU-Database-and-Pipeline2
           - text: Report a Bug
             href:  https://github.com/c383d893/AMF-LSU-Database-and-Pipeline2/issues
+  open-graph: true
 format:
   html:
     theme:
       light: flatly
       dark: darkly
 #    css: styles.css
-    toc: true
+    toc: false
 
 

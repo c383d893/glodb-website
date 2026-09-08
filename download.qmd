@@ -3,3 +3,24 @@ title: "Download"
 ---
 
 Here, you can find all versions of the LSU DB and Pipeline (OTU, ASV, ampliseq). You can also find the newly developed long-read PacBio database.
+
+## LSU
+
+ Version | Release date | Number of sequences | Sequences | Reference tree |
+|---------|:-----|------:|:------:|:------:|
+| 18      | May 2025   | 495    | [Download](./data/gloDB/v18/V18_LSUDB_052025.fasta)     | [Download](./data/gloDB/v18/Root_V18_LSUDB_052025.newick)
+| 16     | Feb 2024  | 214    | [Download](./data/gloDB/v16/V16_LSUDB_2024.fasta) | [Download](./data/gloDB/v16/Root_V16_LSUDB-1000BS-GTRGAMMA-bootstrap-tree.newick)
+| 15     | Jan 2024  | 207    | [Download](./data/gloDB/v15/V15_LSUDB_3.23.21.fasta) | [Download](./data/gloDB/v16/Root_V16_LSUDB-1000BS-GTRGAMMA-bootstrap-tree.newick)
+| 10     | Oct 2020  | 178    | [Download](./data/gloDB/v10/LRORFLR2.V10seqs_8.4.20.fasta) | [Download](./data/gloDB/v10/V10.root.LSUDAT-raxml-1000BS-GTRGAMMA-bootstrap-tree.newick)
+
+
+## LongGloDB
+
+
+ Version | Release date | region | Number of sequences | Average length | Sequences
+|---------|:-----|------:|:------:|------:|---------|
+| 1       | july 2026 | full | 1122 | 2450 | [Download](./data/longGloDB/july2026/LongGloDB_July012026.fasta)
+| 1       | july 2026 | LSU | 1118 | 721 | [Download](./data/longGloDB/july2026/LongGloDB_LSU_July012026.fasta)
+| 1       | july 2026 | SSU | 1122 | 459 | [Download](./data/longGloDB/july2026/LongGloDB_SSU_July012026.fasta)
+| 1       | july 2026 | ITS | 1121 | 512 | [Download](./data/longGloDB/july2026/LongGloDB_ITS_July012026.fasta)
+
