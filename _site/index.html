@@ -47,6 +47,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-cf2dc7073c5ed8bb49325a955e6def9e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-e186427e7b4ba4a73f7029421a8c4977.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-cf2dc7073c5ed8bb49325a955e6def9e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,6 +79,11 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<meta property="og:title" content="GloDB">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.glodb.org/images/AMFPacbioFig2.jpg">
+<meta property="og:site_name" content="GloDB">
+<meta property="og:image:alt" content="V18 Tree">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -310,9 +318,20 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Welcome to <strong>GloDB</strong>! Here, you can find resources related to arbusuclar mycorrhizal fungal (AMF) LSU and long-read (SSU-ITS-LSU) databases and associated pipelines. The databases rely on sequencing from culture collections, and are curated in collaboration with taxonomists. The LSU pipelines allow placement of study sequences into a LSU backbone tree to identify putative AMF, and family and genera. These can be implemented for OTU or ASV assignment, and now can be run in or out of cluster environment.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/AMFPacbioFig2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="V18 Tree"><img src="./images/AMFPacbioFig2.jpg" class="img-fluid figure-img" alt="V18 Tree"></a></p>
+<figcaption>V18 Tree</figcaption>
+</figure>
+</div>
 <section id="database-and-pipeline-references" class="level2">
 <h2 class="anchored" data-anchor-id="database-and-pipeline-references">Database and pipeline references</h2>
-<p>Delavaux, C. S. et al.&nbsp;Utility of large subunit for environmental sequencing of arbuscular mycorrhizal fungi: a new reference database and pipeline. New Phytologist 229, 3048–3052 (2021).&nbsp; Delavaux, C. S., Ramos, R. J., Sturmer, S. L. &amp; Bever, J. D. Environmental identification of arbuscular mycorrhizal fungi using the LSU rDNA gene region: an expanded database and improved pipeline. Mycorrhiza 32, 145–153 (2022).&nbsp; Delavaux, C. S., Ramos, R. J., Stürmer, S. L. &amp; Bever, J. D. An updated LSU database and pipeline for environmental DNA identification of arbuscular mycorrhizal fungi. Mycorrhiza, 1–5 (2024).&nbsp;</p>
+<p>When using this resource, please cite the relevant paper(s):</p>
+<ul>
+<li>Delavaux, C. S. et al.&nbsp;Utility of large subunit for environmental sequencing of arbuscular mycorrhizal fungi: a new reference database and pipeline. New Phytologist 229, 3048–3052 (2021).&nbsp;</li>
+<li>Delavaux, C. S., Ramos, R. J., Sturmer, S. L. &amp; Bever, J. D. Environmental identification of arbuscular mycorrhizal fungi using the LSU rDNA gene region: an expanded database and improved pipeline. Mycorrhiza 32, 145–153 (2022).&nbsp;</li>
+<li>Delavaux, C. S., Ramos, R. J., Stürmer, S. L. &amp; Bever, J. D. An updated LSU database and pipeline for environmental DNA identification of arbuscular mycorrhizal fungi. Mycorrhiza, 1–5 (2024).&nbsp;</li>
+</ul>
 
 
 </section>
@@ -404,7 +423,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/www\.glodb\.org");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -732,6 +751,38 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

@@ -2,7 +2,13 @@ project:
   type: website
 
 website:
+  ## Metadata
   title: "GloDB"
+  #description: ""
+  site-url: https://www.glodb.org
+  open-graph: true
+  #image: 
+  #image-alt: 
   navbar:
     left:
       - href: index.qmd
@@ -20,7 +26,6 @@ website:
             href:  https://github.com/c383d893/AMF-LSU-Database-and-Pipeline2
           - text: Report a Bug
             href:  https://github.com/c383d893/AMF-LSU-Database-and-Pipeline2/issues
-  open-graph: true
 format:
   html:
     theme:
