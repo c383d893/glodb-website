@@ -1,4 +1,4 @@
 ---
   title: "Pipelines"
 ---
-  Test
+  Here, you can find pipelines to be used with GloDB.
