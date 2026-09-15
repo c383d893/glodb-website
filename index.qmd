@@ -1,15 +1,15 @@
 ---
 lightbox: auto
 ---
-Welcome to **GloDB**! Here, you can find resources related to arbusuclar mycorrhizal fungal (AMF) LSU and long-read (SSU-ITS-LSU) databases and associated pipelines. The databases rely on sequencing from culture collections, and are curated in collaboration with taxonomists. The LSU pipelines allow placement of study sequences into a LSU backbone tree to identify putative AMF, and family and genera. These can be implemented for OTU or ASV assignment, and now can be run in or out of cluster environment. 
+Welcome to **GloDB**! Here, you can find resources related to arbuscular mycorrhizal fungal (AMF) large subunit (LSU) and long-read PacBio (SSU-ITS-LSU) databases and associated pipelines. The databases rely on sequencing from culture collections, and are curated in collaboration with taxonomists. The LSU pipelines allow placement of study sequences into a LSU backbone tree to identify putative AMF (phylum Glomeromycota) as well as family and genera. These can be implemented for both operational taxonomic units (OTUs) or or amplicon sequence variants (ASVs). The original pipelines are built for computing clusters, but a recent version also allows for use outside of a cluster environment. 
 
 ![](./images/V18_Tree.png)
 
-**GloDB Backbone tree.** A visualization of the latest curated large subunit (LSU) database backbone tree, including more than 400 tips with updated taxonomy. Colors show AMF genera (with grey representing outgroups).
+**GloDB Backbone tree.** A visualization of the latest curated LSU database backbone tree, including more than 400 tips with updated taxonomy. Colors show AMF genera (with grey representing outgroups).
 
 ![](./images/AMFPacbioFig2.jpg)
 
-**Large subunit tree from curated long-read database LongGloDB.** Large subunit (LSU) phylogenetic tree of the GloDB. The LSU region was extracted from the PacBio long-reads to place them into the previously developed backbone LSU tree. Colors show database groups (GloDB outgroup, Geosiphonaceae, and backbone sequences as well as PacBio-derived LongGloDB LSU sequences from the present study and Stefani et al.(2025)) and AMF family.
+**LSU tree from curated long-read database LongGloDB.** The LSU region was extracted from the PacBio long-reads to place them into the previously developed backbone LSU tree. Colors show database groups and AMF family.
 
 ## Database and pipeline references
 
