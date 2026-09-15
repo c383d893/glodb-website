@@ -14,7 +14,6 @@ website:
       - href: index.qmd
         text: Home
       - download.qmd
-      - about.qmd
       - contact.qmd
 
     tools:
