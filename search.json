@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Please contact us with any questions, bugs, or suggestions!\nCamille Delavaux - c.delavaux@nioo.knaw.nl Robert Ramos - robert.ramos@stonybrook.edu"
+    "text": "Please contact us with any questions, bugs, or suggestions!\n\nCamille Delavaux - c.delavaux@nioo.knaw.nl\nRobert Ramos - robert.ramos@stonybrook.edu"
+  },
+  {
+    "objectID": "pipelines.html",
+    "href": "pipelines.html",
+    "title": "Pipelines",
+    "section": "",
+    "text": "Test"
   },
   {
     "objectID": "index.html",
@@ -21,24 +28,31 @@
     "text": "Database and pipeline references\nWhen using this resource, please cite the relevant paper(s):\n\nDelavaux, C. S. et al. Utility of large subunit for environmental sequencing of arbuscular mycorrhizal fungi: a new reference database and pipeline. New Phytologist 229, 3048–3052 (2021). \nDelavaux, C. S., Ramos, R. J., Sturmer, S. L. & Bever, J. D. Environmental identification of arbuscular mycorrhizal fungi using the LSU rDNA gene region: an expanded database and improved pipeline. Mycorrhiza 32, 145–153 (2022). \nDelavaux, C. S., Ramos, R. J., Stürmer, S. L. & Bever, J. D. An updated LSU database and pipeline for environmental DNA identification of arbuscular mycorrhizal fungi. Mycorrhiza, 1–5 (2024)."
   },
   {
-    "objectID": "download.html",
-    "href": "download.html",
-    "title": "Download",
+    "objectID": "databases.html",
+    "href": "databases.html",
+    "title": "Databases",
     "section": "",
-    "text": "Here, you can find all versions of the LSU DB and Pipeline (OTU, ASV, ampliseq). You can also find the newly developed long-read PacBio database."
+    "text": "Here, you can find all versions of the LSU database (GloDB) and pipeline (OTU, ASV, ampliseq). You can also find the newly developed long-read PacBio database (LongGloDB)."
   },
   {
-    "objectID": "download.html#lsu",
-    "href": "download.html#lsu",
-    "title": "Download",
-    "section": "LSU",
-    "text": "LSU\n\n\n\nVersion\nRelease date\nNumber of sequences\nSequences\nReference tree\n\n\n\n\n18\nMay 2025\n495\nDownload\nDownload\n\n\n16\nFeb 2024\n214\nDownload\nDownload\n\n\n15\nJan 2024\n207\nDownload\nDownload\n\n\n10\nOct 2020\n178\nDownload\nDownload"
+    "objectID": "databases.html#glodb",
+    "href": "databases.html#glodb",
+    "title": "Databases",
+    "section": "GloDB",
+    "text": "GloDB\n\n\n\nVersion\nRelease date\nNumber of sequences\nSequences\nReference tree\n\n\n\n\n18\nMay 2025\n495\nDownload\nDownload\n\n\n16\nFeb 2024\n214\nDownload\nDownload\n\n\n15\nJan 2024\n207\nDownload\nDownload\n\n\n10\nOct 2020\n178\nDownload\nDownload"
   },
   {
-    "objectID": "download.html#longglodb",
-    "href": "download.html#longglodb",
-    "title": "Download",
+    "objectID": "databases.html#longglodb",
+    "href": "databases.html#longglodb",
+    "title": "Databases",
     "section": "LongGloDB",
-    "text": "LongGloDB\n\n\n\nVersion\nRelease date\nregion\nNumber of sequences\nAverage length\nSequences\n\n\n\n\n1\nJuly 2026\nfull\n1122\n2450\nDownload\n\n\n1\nJuly 2026\nLSU\n1118\n721\nDownload\n\n\n1\nJuly 2026\nSSU\n1122\n459\nDownload\n\n\n1\nJuly 2026\nITS\n1121\n512\nDownload"
+    "text": "LongGloDB\n\n\n\nVersion\nRelease date\nregion\nNumber of sequences\nAverage length\nSequences\n\n\n\n\n1\nJuly 2026\nSSU-ITS-LSU\n1122\n2450\nDownload\n\n\n1\nJuly 2026\nLSU\n1118\n721\nDownload\n\n\n1\nJuly 2026\nSSU\n1122\n459\nDownload\n\n\n1\nJuly 2026\nITS\n1121\n512\nDownload"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Please contact us with any questions, bugs, or suggestions!\nCamille Delavaux - c.delavaux@nioo.knaw.nl Robert Ramos - robert.ramos@stonybrook.edu"
   }
 ]

@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.glodb.org/contact.html</loc>
-    <lastmod>2026-09-15T07:37:39.484Z</lastmod>
+    <loc>https://www.glodb.org/about.html</loc>
+    <lastmod>2026-09-15T11:19:12.895Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.glodb.org/pipelines.html</loc>
+    <lastmod>2026-09-15T11:19:12.906Z</lastmod>
   </url>
   <url>
     <loc>https://www.glodb.org/index.html</loc>
-    <lastmod>2026-09-15T07:37:39.502Z</lastmod>
+    <lastmod>2026-09-15T11:19:12.906Z</lastmod>
   </url>
   <url>
-    <loc>https://www.glodb.org/download.html</loc>
-    <lastmod>2026-09-15T07:37:39.498Z</lastmod>
+    <loc>https://www.glodb.org/databases.html</loc>
+    <lastmod>2026-09-15T11:19:12.900Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.glodb.org/contact.html</loc>
+    <lastmod>2026-09-15T11:19:12.895Z</lastmod>
   </url>
 </urlset>
