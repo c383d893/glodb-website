@@ -5,10 +5,6 @@ Welcome to **GloDB**! Here, you can find resources related to arbusuclar mycorrh
 
 ![V18](./images/V18_Tree.png)
 
-![V18](./images/V18_Tree_legend.png)
-
-
-![Pacbio Fig 1](./images/AMFPacbioSIFig1.jpg)
 
 ![Pacbio Fig 2](./images/AMFPacbioFig2.jpg)
 
