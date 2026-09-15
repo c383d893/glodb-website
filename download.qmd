@@ -19,8 +19,8 @@ Here, you can find all versions of the LSU DB and Pipeline (OTU, ASV, ampliseq).
 
  Version | Release date | region | Number of sequences | Average length | Sequences
 |---------|:-----|------:|:------:|------:|---------|
-| 1       | july 2026 | full | 1122 | 2450 | [Download](./data/longGloDB/july2026/LongGloDB_July012026.fasta)
-| 1       | july 2026 | LSU | 1118 | 721 | [Download](./data/longGloDB/july2026/LongGloDB_LSU_July012026.fasta)
-| 1       | july 2026 | SSU | 1122 | 459 | [Download](./data/longGloDB/july2026/LongGloDB_SSU_July012026.fasta)
-| 1       | july 2026 | ITS | 1121 | 512 | [Download](./data/longGloDB/july2026/LongGloDB_ITS_July012026.fasta)
+| 1       | July 2026 | full | 1122 | 2450 | [Download](./data/longGloDB/july2026/LongGloDB_July012026.fasta)
+| 1       | July 2026 | LSU | 1118 | 721 | [Download](./data/longGloDB/july2026/LongGloDB_LSU_July012026.fasta)
+| 1       | July 2026 | SSU | 1122 | 459 | [Download](./data/longGloDB/july2026/LongGloDB_SSU_July012026.fasta)
+| 1       | July 2026 | ITS | 1121 | 512 | [Download](./data/longGloDB/july2026/LongGloDB_ITS_July012026.fasta)
 
