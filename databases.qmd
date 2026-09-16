@@ -10,7 +10,7 @@ Here, you can find all versions of the LSU database (GloDB) and pipeline (OTU, A
 |---------|:-----|------:|:------:|:------:|
 | 18      | May 2025   | 495    | [Download](./data/gloDB/v18/V18_LSUDB_052025.fasta)     | [Download](./data/gloDB/v18/Root_V18_LSUDB_052025.newick)
 | 16     | Feb 2024  | 214    | [Download](./data/gloDB/v16/V16_LSUDB_2024.fasta) | [Download](./data/gloDB/v16/Root_V16_LSUDB-1000BS-GTRGAMMA-bootstrap-tree.newick)
-| 15     | Jan 2024  | 207    | [Download](./data/gloDB/v15/V15_LSUDB_3.23.21.fasta) | [Download](./data/gloDB/v16/Root_V16_LSUDB-1000BS-GTRGAMMA-bootstrap-tree.newick)
+| 15     | Jan 2024  | 207    | [Download](./data/gloDB/v15/V15_LSUDB_3.23.21.fasta) | [Download](./data/gloDB/v15/Root_V15_LSUDB-1000BS-GTRGAMMA-bootstrap-tree.newick)
 | 10     | Oct 2020  | 178    | [Download](./data/gloDB/v10/LRORFLR2.V10seqs_8.4.20.fasta) | [Download](./data/gloDB/v10/V10.root.LSUDAT-raxml-1000BS-GTRGAMMA-bootstrap-tree.newick)
 
 

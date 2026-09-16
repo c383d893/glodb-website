@@ -1,9 +1,0 @@
----
-title: "Contact"
----
-
-Please contact us with any questions, bugs, or suggestions!
-
-Camille Delavaux - c.delavaux@nioo.knaw.nl
-Robert Ramos - robert.ramos@stonybrook.edu
-
