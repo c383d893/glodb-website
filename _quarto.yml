@@ -26,6 +26,7 @@ website:
             href:  https://github.com/c383d893/AMF-LSU-Database-and-Pipeline2
           - text: Report a Bug
             href:  https://github.com/c383d893/AMF-LSU-Database-and-Pipeline2/issues
+
 format:
   html:
     theme:
