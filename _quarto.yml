@@ -7,6 +7,10 @@ website:
   #description: ""
   site-url: https://www.glodb.org
   open-graph: true
+  google-analytics:
+    tracking-id: "G-RZJSDPR0RX"
+    storage: none
+    anonymize-ip: true
   #image: 
   #image-alt: 
   navbar:
@@ -26,7 +30,6 @@ website:
             href:  https://github.com/c383d893/AMF-LSU-Database-and-Pipeline2
           - text: Report a Bug
             href:  https://github.com/c383d893/AMF-LSU-Database-and-Pipeline2/issues
-
 format:
   html:
     theme:
