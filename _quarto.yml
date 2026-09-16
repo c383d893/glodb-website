@@ -4,15 +4,15 @@ project:
 website:
   ## Metadata
   title: "GloDB"
-  #description: ""
+  description: "Curated reference database and pipeline for environmental identification of arbuscular mycorrhizal fungi (AMF)"
   site-url: https://www.glodb.org
   open-graph: true
   google-analytics:
     tracking-id: "G-RZJSDPR0RX"
     storage: none
     anonymize-ip: true
-  #image: 
-  #image-alt: 
+  image: ./images/V18_Tree.png
+  image-alt: "GloDB backbone tree visualization showing AMF genera by taxonomy with grey representing outgroups" 
   navbar:
     left:
       - href: index.qmd
