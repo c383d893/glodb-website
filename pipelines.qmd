@@ -1,4 +1,42 @@
 ---
-  title: "Pipelines"
+title: "Pipelines"
 ---
-  Here, you can find pipelines to be used with GloDB.
+
+These pipelines allow placement of study sequences into the GloDB backbone tree for phylogenetic identification of arbuscular mycorrhizal fungi (AMF) at the family and genus level. All pipelines support the ASV workflow; the legacy pipeline also supports OTUs.
+
+## GloDB Pipelines
+
+### Legacy Pipeline (OTU and ASV)
+
+The legacy pipeline is the original implementation for AMF identification from environmental sequences. It supports both operational taxonomic units (OTUs) and amplicon sequence variants (ASVs), and is designed for use on computing clusters.
+
+Source code and documentation: [c383d893/AMF-LSU-Database-and-Pipeline2](https://github.com/c383d893/AMF-LSU-Database-and-Pipeline2)
+
+### ASV Pipeline (post nf-core ampliseq)
+
+::: {.callout-warning title="Work in progress"}
+This pipeline is under active development. Scripts and documentation may change as we finalize the workflow.
+:::
+
+This newer pipeline improves on the legacy workflow by first using [nf-core/ampliseq](https://nf-co.re/ampliseq) (v2.15.0) for initial sequence processing, including quality control, demultiplexing, dereplication, and chimera removal. After ampliseq, a series of shell scripts perform final processing steps: renaming and extracting ASVs, trimming, alignment, tree building, clade extraction, and taxonomy assignment. Tree building and phylogenetic placement are performed with standalone executables (`raxml`, `epa-ng`, `gappa`).
+
+The post-ampliseq scripts include:
+
+| Step | Script(s) | Description |
+|------|-----------|-------------|
+| ASV extraction | `AMFrenameASVs.sh`, `AMFtrimmedToASVs.sh` | Extract and rename ASVs from ampliseq output |
+| Trimming | `AMFseqTrimParallel.sh` | Trim reads to target regions (R1, R2 cutoffs) |
+| Alignment | `AMFalignseqs.sh` | Align sequences against the reference |
+| Tree building | `AMFbuildTree.sh`, `AMFlaunchTrees.sh` | Clean the backbone tree with `gappa`, then run `epa-ng` for phylogenetic placement and `gappa` for grafting |
+| Clade extraction | `AMFcladesExtract.sh` | Extract study sequences into clades |
+| Taxonomy | `AMFcladeTaxonomy.sh` | Assign taxonomy to clades |
+
+Environment dependencies are listed in [amf_pipeline_requirements.yml](https://github.com/mdehollander/AMF-LSU-Database-and-Pipeline2/blob/ampliseq/2024_AMFPipeline/2024_AMFPipeline_ASV/amf_pipeline_requirements.yml) (managed with [pixi](https://pixi.sh/)).
+
+Source code and documentation: [mdehollander/AMF-LSU-Database-and-Pipeline2 (ampliseq branch)](https://github.com/mdehollander/AMF-LSU-Database-and-Pipeline2/tree/ampliseq/2024_AMFPipeline/2024_AMFPipeline_ASV)
+
+**Planned development:** These post-ampliseq scripts are currently executed manually in sequence. A standalone Nextflow pipeline is in development that will automate these downstream scripts into a single, reproducible workflow run after ampliseq.
+
+## LongGloDB
+
+LongGloDB does not have an associated pipeline at this time. Database files can be downloaded from the [Databases page](databases.qmd).
