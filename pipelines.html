@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -42,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-65ab6f6afcc98c2005f3bec1c5e98b7d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-a515e054079012129989d5397ee3c9c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-65ab6f6afcc98c2005f3bec1c5e98b7d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7100700a5d4657facf49b32369185e6d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-90b0ccabdf50233fb893b00cd6e33405.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-7100700a5d4657facf49b32369185e6d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -349,9 +349,88 @@ gtag('config', 'G-RZJSDPR0RX', { 'anonymize_ip': true});
 </header>
 
 
-<p>Here, you can find pipelines to be used with GloDB.</p>
+<p>These pipelines allow placement of study sequences into the GloDB backbone tree for phylogenetic identification of arbuscular mycorrhizal fungi (AMF) at the family and genus level. All pipelines support the ASV workflow; the legacy pipeline also supports OTUs.</p>
+<section id="glodb-pipelines" class="level2">
+<h2 class="anchored" data-anchor-id="glodb-pipelines">GloDB Pipelines</h2>
+<section id="legacy-pipeline-otu-and-asv" class="level3">
+<h3 class="anchored" data-anchor-id="legacy-pipeline-otu-and-asv">Legacy Pipeline (OTU and ASV)</h3>
+<p>The legacy pipeline is the original implementation for AMF identification from environmental sequences. It supports both operational taxonomic units (OTUs) and amplicon sequence variants (ASVs), and is designed for use on computing clusters.</p>
+<p>Source code and documentation: <a href="https://github.com/c383d893/AMF-LSU-Database-and-Pipeline2">c383d893/AMF-LSU-Database-and-Pipeline2</a></p>
+</section>
+<section id="asv-pipeline-post-nf-core-ampliseq" class="level3">
+<h3 class="anchored" data-anchor-id="asv-pipeline-post-nf-core-ampliseq">ASV Pipeline (post nf-core ampliseq)</h3>
+<div class="callout callout-style-default callout-warning callout-titled" title="Work in progress">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Work in progress
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This pipeline is under active development. Scripts and documentation may change as we finalize the workflow.</p>
+</div>
+</div>
+<p>This newer pipeline improves on the legacy workflow by first using <a href="https://nf-co.re/ampliseq">nf-core/ampliseq</a> (v2.15.0) for initial sequence processing, including quality control, demultiplexing, dereplication, and chimera removal. After ampliseq, a series of shell scripts perform final processing steps: renaming and extracting ASVs, trimming, alignment, tree building, clade extraction, and taxonomy assignment. Tree building and phylogenetic placement are performed with standalone executables (<code>raxml</code>, <code>epa-ng</code>, <code>gappa</code>).</p>
+<p>The post-ampliseq scripts include:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 36%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Script(s)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ASV extraction</td>
+<td><code>AMFrenameASVs.sh</code>, <code>AMFtrimmedToASVs.sh</code></td>
+<td>Extract and rename ASVs from ampliseq output</td>
+</tr>
+<tr class="even">
+<td>Trimming</td>
+<td><code>AMFseqTrimParallel.sh</code></td>
+<td>Trim reads to target regions (R1, R2 cutoffs)</td>
+</tr>
+<tr class="odd">
+<td>Alignment</td>
+<td><code>AMFalignseqs.sh</code></td>
+<td>Align sequences against the reference</td>
+</tr>
+<tr class="even">
+<td>Tree building</td>
+<td><code>AMFbuildTree.sh</code>, <code>AMFlaunchTrees.sh</code></td>
+<td>Clean the backbone tree with <code>gappa</code>, then run <code>epa-ng</code> for phylogenetic placement and <code>gappa</code> for grafting</td>
+</tr>
+<tr class="odd">
+<td>Clade extraction</td>
+<td><code>AMFcladesExtract.sh</code></td>
+<td>Extract study sequences into clades</td>
+</tr>
+<tr class="even">
+<td>Taxonomy</td>
+<td><code>AMFcladeTaxonomy.sh</code></td>
+<td>Assign taxonomy to clades</td>
+</tr>
+</tbody>
+</table>
+<p>Environment dependencies are listed in <a href="https://github.com/mdehollander/AMF-LSU-Database-and-Pipeline2/blob/ampliseq/2024_AMFPipeline/2024_AMFPipeline_ASV/amf_pipeline_requirements.yml">amf_pipeline_requirements.yml</a> (managed with <a href="https://pixi.sh/">pixi</a>).</p>
+<p>Source code and documentation: <a href="https://github.com/mdehollander/AMF-LSU-Database-and-Pipeline2/tree/ampliseq/2024_AMFPipeline/2024_AMFPipeline_ASV">mdehollander/AMF-LSU-Database-and-Pipeline2 (ampliseq branch)</a></p>
+<p><strong>Planned development:</strong> These post-ampliseq scripts are currently executed manually in sequence. A standalone Nextflow pipeline is in development that will automate these downstream scripts into a single, reproducible workflow run after ampliseq.</p>
+</section>
+</section>
+<section id="longglodb" class="level2">
+<h2 class="anchored" data-anchor-id="longglodb">LongGloDB</h2>
+<p>LongGloDB does not have an associated pipeline at this time. Database files can be downloaded from the <a href="./databases.html">Databases page</a>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
